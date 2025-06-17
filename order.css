@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Savate:ital,wght@0,200..900;1,200..900&family=Underdog&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f0d7;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 70px 0px; 
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: inherit;
+}
+
+#logo img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+#cart img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.content {
+    text-align: center;
+    font-family: 'Underdog','Savate','Courier New';
+    font-size: larger;
+}
+
+.flavour-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.Box {
+    background-color: #fcf7e8;
+    border: 2px solid #e4d7b7;
+    border-radius: 16px;
+    padding: 30px 20px;
+    position: relative;
+    bottom: 10px;
+    max-width: 100%;
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.TopScoops , .Flavours {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.innerBox {
+    background-color: #fcf7e8;
+    border: 2px solid #e4d7b7;
+    border-radius: 16px;
+    width: 135px;
+    padding: 20px 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.innerBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.flavour-card h3 {
+    font-size: 18px;
+    margin: 10px 0 14px;
+    font-family: inherit;
+    font-weight: 600;
+    min-height: 42px;
+}
+
+.flavour-card button {
+    padding: 6px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #f9f0ec;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.flavour-card button:hover {
+    background-color: #e6dec5;
+}
+.topFlavoursSection,.Menu{
+        font-family: 'Underdog';
+        font-size: 25px;
+        text-align: center;
+}
+
