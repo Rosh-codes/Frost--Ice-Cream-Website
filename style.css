@@ -109,7 +109,7 @@ nav {
     max-width: 1200px;
 }
 
-.flavour-box {
+.flavour-box  {
     background-color: #fcf7e8;
     border: 2px solid #e4d7b7;
     border-radius: 16px;
@@ -501,4 +501,70 @@ nav {
   flex-direction: column;
   
 }
+.sliderContainer {
+    margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  border: 2px solid  #e4d7b7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+/* Buttons */
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 11px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 7px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #7c5b3f; /* match your brand's cozy brown */
+}
+
+
 
