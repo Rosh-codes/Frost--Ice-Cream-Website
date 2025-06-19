@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Savate:ital,wght@0,200..900;1,200..900&family=Underdog&display=swap');
 
+/* === DEFAULT (DESKTOP) STYLES === */
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #f8f0d7;
+    font-family: 'Quicksand', sans-serif;
 }
 
 nav {
     display: flex;
     align-items: center;
-    padding: 20px 70px 0px; 
+    padding: 20px 70px 0px;
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -32,15 +34,17 @@ nav {
 .content {
     text-align: center;
     font-family: 'Underdog','Savate','Courier New';
-    font-size: larger;
+    padding: 0 10%;
 }
 
-.flavour-card img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 10px;
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
 }
 
 .Box {
@@ -48,14 +52,12 @@ nav {
     border: 2px solid #e4d7b7;
     border-radius: 16px;
     padding: 30px 20px;
-    position: relative;
-    bottom: 10px;
-    max-width: 100%;
+    max-width: 80%;
     margin: 50px auto;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.TopScoops , .Flavours {
+.TopScoops, .Flavours {
     display: flex;
     gap: 24px;
     justify-content: center;
@@ -67,7 +69,8 @@ nav {
     background-color: #fcf7e8;
     border: 2px solid #e4d7b7;
     border-radius: 16px;
-    width: 135px;
+    width: calc(16.666% - 40px); /* 6 per row on desktop */
+    max-width: 180px;
     padding: 20px 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
@@ -83,31 +86,144 @@ nav {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+.flavour-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
 .flavour-card h3 {
-    font-size: 18px;
+    font-size: 1.1rem;
     margin: 10px 0 14px;
     font-family: inherit;
     font-weight: 600;
     min-height: 42px;
+    display: flex;
+    align-items: center;
 }
 
 .flavour-card button {
-    padding: 6px 14px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 1rem;
     border: 1px solid #ccc;
     background-color: #f9f0ec;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.2s ease;
     font-family: 'Quicksand', sans-serif;
+    width: 90%;
+    max-width: 120px;
+    white-space: nowrap;
 }
 
 .flavour-card button:hover {
     background-color: #e6dec5;
 }
-.topFlavoursSection,.Menu{
-        font-family: 'Underdog';
-        font-size: 25px;
-        text-align: center;
+
+.topFlavoursSection, .Menu {
+    font-family: 'Underdog';
+    font-size: 1.8rem;
+    text-align: center;
 }
 
+/* === TABLET (1024px and below) === */
+@media (max-width: 1024px) {
+    .innerBox {
+        width: calc(20% - 30px); /* 5 per row */
+    }
+
+    .Box {
+        max-width: 85%;
+    }
+
+    nav {
+        padding: 20px 50px 0px;
+    }
+}
+
+/* === SMALL TABLET (768px and below) === */
+@media (max-width: 768px) {
+    .innerBox {
+        width: calc(25% - 30px); /* 4 per row */
+        max-width: 150px;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content h2 {
+        font-size: 1.3rem;
+    }
+
+    #logo img {
+        width: 90px;
+    }
+
+    #cart img {
+        width: 45px;
+    }
+}
+
+/* === MOBILE (600px and below) === */
+@media (max-width: 600px) {
+    .innerBox {
+        width: calc(33.333% - 20px); /* 3 per row */
+        max-width: 130px;
+        padding: 15px 10px;
+    }
+
+    .flavour-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .flavour-card h3 {
+        font-size: 1rem;
+    }
+
+    .flavour-card button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    nav {
+        padding: 20px 30px 0px;
+    }
+}
+
+/* === SMALL MOBILE (480px and below) === */
+@media (max-width: 480px) {
+    .innerBox {
+        width: calc(50% - 20px); /* 2 per row */
+        max-width: 140px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.1rem;
+    }
+
+    #logo img {
+        width: 80px;
+    }
+
+    #cart img {
+        width: 40px;
+    }
+
+    .Box {
+        max-width: 90%;
+        padding: 20px 15px;
+    }
+
+    .flavour-card button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
